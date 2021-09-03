@@ -33,29 +33,43 @@
 
 // console.log(res);
 
-let str = "i am string";
-let str1 = str.split("");
+// let str = "i am string";
+// let str1 = str.split("");
 
-console.log(str1);
+// console.log(str1);
 
-let arr = [];
+// let arr = [];
 
-for (let i = 0; i < str1.length; i++) {
-  if (str1[i] == " ") {
-    arr[i] = " ";
-  }
-}
+// for (let i = 0; i < str1.length; i++) {
+//   if (str1[i] == " ") {
+//     arr[i] = " ";
+//   }
+// }
 
-let j = str1.length - 1;
+// let j = str1.length - 1;
 
-for (let i = 0; i < str1.length; i++) {
-  if (str1[i] != " ") {
-    if (arr[j] == " ") {
-      j--;
+// for (let i = 0; i < str1.length; i++) {
+//   if (str1[i] != " ") {
+//     if (arr[j] == " ") {
+//       j--;
+//     }
+//     arr[j] = str1[i];
+//     j--;
+//   }
+// }
+
+// console.log(arr);
+
+let n = 100;
+for (let i = 2; i <= n; i++) {
+  let isprime = true;
+  for (let j = 2; j < i; j++) {
+    if (i % j == 0) {
+      isprime = false;
+      break;
     }
-    arr[j] = str1[i];
-    j--;
+  }
+  if (isprime) {
+    console.log(i);
   }
 }
-
-console.log(arr);
